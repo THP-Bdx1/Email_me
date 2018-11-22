@@ -1,0 +1,12 @@
+<div class="container" style="overflow: scroll">
+    <div class="row">
+        <div class="col-10-lg offset-1 pt-5">
+        <tr><td>
+            <h2 class="pb-2"> <div id="contentobject"><%= @mail.object %> </div></h2>
+            <p class="text-justify pr-5"> <%= @mail.body %> </p>
+            <%= link_to 'Destroy mail', delete_path(mail_id: @mail.id),  method: :delete, class: "deletemail", remote: true  %>
+        </td></tr>
+        </div>
+    </div>    
+</div>
+<!-- method: :delete, data: { confirm: 'Are you sure?' } -->

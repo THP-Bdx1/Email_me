@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 border rounded border-dark mt-3 mb-3">
+            <tr>
+            <% @emails.each do |mail| %>
+                <div class="hey">
+                    <div class="row border-bottom border-dark">
+                        <td>
+                            <div class="col-10">
+                            <div class="mailobject"><%= mail.object %></div>
+                            </div>
+                            <div class="col-2">
+                                <%= link_to "read", display_path(mail_id: mail.id), remote: true%>   
+                                <!-- <%=button_to "Read", @email %> -->
+                            </div>
+                        </td>
+                    </div>
+                </div>
+            <% end %>
+            </tr>
+        </div>
+        <div class="col-lg-6 offset-1 border rounded border-dark mt-3 mb-3">
+            <div id="mail-content">
+
+            </div>
+        </div>
+    </div>
+</div>
