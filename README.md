@@ -11,7 +11,7 @@
 N'oublie pas le "db:create", "db:migrate", et "db:seed" des familles si tu le lances en localhost !
 Tu devrais directement arriver sur la page des emails (générés par le seed). Une colonne liste tous les objets des emails, avec pour chacun un bouton "Read" qui t'affiche le détail du mail (et qui te permet de le supprimer), et un bouton "Unread" qui te permet de marquer ton mail comme non lu.
 
-![carou](https://media.giphy.com/media/dZ3xLxsO6Qe7m/giphy.gif)
+![carou](https://i.gifer.com/XNF.gif)
 
 
 ## EQUIPE
