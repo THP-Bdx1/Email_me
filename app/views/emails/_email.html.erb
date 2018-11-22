@@ -4,9 +4,9 @@
         <tr><td>
             <h2 class="pb-2"> <div class="contentobject"><%= @mail.object %> </div></h2>
             <p class="text-justify pr-5"> <%= @mail.body %> </p>
-            <%= link_to 'Destroy mail', delete_path(mail_id: @mail.id),  method: :delete, class: "deletemail", remote: true  %>
+            <span class="badge badge-danger"><%= link_to 'Destroy mail', delete_path(mail_id: @mail.id),  method: :delete, class: "deletemail text-light", remote: true  %></span>
         </td></tr>
         </div>
-    </div>    
+    </div>
 </div>
 <!-- method: :delete, data: { confirm: 'Are you sure?' } -->

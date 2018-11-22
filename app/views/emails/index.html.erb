@@ -1,32 +1,35 @@
 <%=link_to "reload", root_path(), id: "reload", remote: true %>
 <div class="container">
+
     <div class="row">
-        <div class="col-lg-4 border rounded border-dark mt-3 mb-3">
-            <div id="mailing">
-            <% @emailspage.each do |mail| %>
-                    <div class="row border-bottom border-dark">
-                        <div class="mailobj<%= mail.id %>">
-                            <div class="row ml-1">
-                                <div class="col-10">
-                                    <%= mail.object %>
-                                </div>
-                                <div class="col-1">
-                                    <%= link_to "Read", display_path(mail_id: mail.id), remote: true%>
-                                </div>
-                                <div class="col-1">   
-                                    <%= link_to "Unread", unread_path(mail_id: mail.id), remote: true%>   
-                                </div>
-                            <div class="row ml-1">
-                                    <%= mail.created_at %>                            
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-            <% end %>
-                </div>
+
+        <div id="mailing" class="col-lg-4 border rounded border-dark mt-3 mb-3">
+              <% @emailspage.each do |mail| %>
+                      <div class="row border-bottom border-dark">
+                          <div class="mailobj<%= mail.id %>">
+                              <div class="row">
+                                  <div class="col-6 ml-1">
+                                      <span><%= mail.object %></span>
+                                  </div>
+                                  <div class="col-1 offset-1">
+                                      <span class="badge badge-dark"><%= link_to "Read", display_path(mail_id: mail.id), class:"text-light", remote: true%></span>
+                                  </div>
+                                  <div class="col-1 offset-1">
+                                      <span class="badge badge-dark"><%= link_to "Unread", unread_path(mail_id: mail.id), class:"text-light", remote: true%></span>
+                                  </div>
+                              <div class="row offset-1">
+                                      <span class="font-italic"><%= mail.created_at %></span>
+                              </div>
+
+                              </div>
+                          </div>
+                      </div>
+              <% end %>
         </div>
-        <div class="col-lg-6 offset-1 border rounded border-dark mt-3 mb-3">
+
+        <div class="col-lg-6 offset-1 border rounded border-dark mt-3 mb-3 sticky-top" style="max-height: 500px; overflow: scroll;">
             <div id="mail-content">
+              <img src="http://i.imgur.com/qhMbkGi.jpg">
 
             </div>
         </div>

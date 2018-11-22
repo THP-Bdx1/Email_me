@@ -18,6 +18,6 @@ require 'faker'
   end
 
   10.times do
-    emails= Email.create!(body: Faker::Lorem.paragraphs(3), object: Faker::LeagueOfLegends.quote)
+    emails= Email.create!(body: Faker::Lorem.paragraphs(12), object: Faker::University.name)
   end
 end
