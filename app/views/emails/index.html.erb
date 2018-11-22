@@ -1,23 +1,23 @@
+<%=link_to "reload", root_path(), id: "reload", remote: true %>
 <div class="container">
     <div class="row">
         <div class="col-lg-4 border rounded border-dark mt-3 mb-3">
-            <tr>
-            <% @emails.each do |mail| %>
-                <div class="hey">
+            <div id="mailing">
+            <% @emailspage.each do |mail| %>
                     <div class="row border-bottom border-dark">
-                        <td>
+                        <ul class="mailobj<%= mail.id %>">
                             <div class="col-10">
-                            <div class="mailobject"><%= mail.object %></div>
+                            <%= mail.object %>
                             </div>
                             <div class="col-2">
-                                <%= link_to "read", display_path(mail_id: mail.id), remote: true%>   
-                                <!-- <%=button_to "Read", @email %> -->
+                                <%= link_to "Read", display_path(mail_id: mail.id), remote: true%>   
+                                <%= link_to "Unread", unread_path(mail_id: mail.id), remote: true%>   
+                                <%= mail.created_at %>
                             </div>
-                        </td>
+                        </ul>
                     </div>
-                </div>
             <% end %>
-            </tr>
+                </div>
         </div>
         <div class="col-lg-6 offset-1 border rounded border-dark mt-3 mb-3">
             <div id="mail-content">

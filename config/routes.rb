@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root to: "emails#index"
   get 'home', to: "home#index"
-  post 'home/index', to: "home#display"
   get 'display', to: "emails#display"
+  get 'unread', to: "emails#unread"
   delete 'delete', to: "emails#destroy"
   devise_for :users
   resources :tasks, except: [:show]

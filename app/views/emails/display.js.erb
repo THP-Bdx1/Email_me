@@ -1,1 +1,3 @@
 $('#mail-content').html("<%= j (render "emails/email") %>");
+
+$(".mailobj<%= @mail.id %>").parent().css("background-color", "yellow");

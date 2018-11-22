@@ -63,6 +63,8 @@
 
 $(document).ready(function () {
 
+    document.getElementById('reload').click();
+
 
     $(".category_title").click(function () {
         $('.category_titles .card').hide();
@@ -74,7 +76,6 @@ $(document).ready(function () {
     // }, function () {
     //     $(".child").hide(400);
     // }); 
-
 
     var boolean = true;
     if(boolean==true){

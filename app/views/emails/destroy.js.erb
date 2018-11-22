@@ -2,15 +2,10 @@ $('.deletemail').bind('ajax:success', function() {
 $(this).parent().remove();
 });
 
-var contentobject = document.getElementById('contentobject');
-$("#mailobject").each(function (i) {
-var mailobject = document.getElementById('mailobject');
-if(contentobject.innerHTML == mailobject.innerHTML){
-$(".mailobject).css('color', 'blue');
-}
-};
+$(".mailobj<%= @mail.id %>").remove();
 
 
-$(".mailobject<%= @mail.id %>").css('color', 'blue');
+
+
 
 
