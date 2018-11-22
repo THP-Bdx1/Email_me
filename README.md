@@ -3,17 +3,15 @@
 ---
 # THE PROJECT
 
-[Le lien du projet](https://car-ou-sel.herokuapp.com/)
+[Le lien du projet](https://??????.herokuapp.com/)
 
 ---
 ## EXPLICATIONS
 
 N'oublie pas le "db:create", "db:migrate", et "db:seed" des familles si tu le lances en localhost !
-Sinon enjoy le site, il est magnifique si ta passion c'est les caroussels (et que tu es une personne plutôt étrange
-genre elle
-![Strange](https://media.giphy.com/media/4NrIV7ECIl6IG0OukS/giphy.gif) 
-ou elle)
-![carou](https://media.giphy.com/media/EsLPGRncATA0E/giphy.gif)
+Tu devrais directement arriver sur la page des emails (générés par le seed). Une colonne liste tous les objets des emails, avec pour chacun un bouton "Read" qui t'affiche le détail du mail (et qui te permet de le supprimer), et un bouton "Unread" qui te permet de marquer ton mail comme non lu.
+
+![carou](https://i.gifer.com/XNF.gif)
 
 
 ## EQUIPE

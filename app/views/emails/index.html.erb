@@ -5,16 +5,22 @@
             <div id="mailing">
             <% @emailspage.each do |mail| %>
                     <div class="row border-bottom border-dark">
-                        <ul class="mailobj<%= mail.id %>">
-                            <div class="col-10">
-                            <%= mail.object %>
+                        <div class="mailobj<%= mail.id %>">
+                            <div class="row ml-1">
+                                <div class="col-10">
+                                    <%= mail.object %>
+                                </div>
+                                <div class="col-1">
+                                    <%= link_to "Read", display_path(mail_id: mail.id), remote: true%>
+                                </div>
+                                <div class="col-1">   
+                                    <%= link_to "Unread", unread_path(mail_id: mail.id), remote: true%>   
+                                </div>
+                            <div class="row ml-1">
+                                    <%= mail.created_at %>                            
                             </div>
-                            <div class="col-2">
-                                <%= link_to "Read", display_path(mail_id: mail.id), remote: true%>   
-                                <%= link_to "Unread", unread_path(mail_id: mail.id), remote: true%>   
-                                <%= mail.created_at %>
                             </div>
-                        </ul>
+                        </div>
                     </div>
             <% end %>
                 </div>

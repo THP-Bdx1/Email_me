@@ -1,5 +1,7 @@
 <%@emails.each do |mail| %>
-    <% if mail.read == true %>
-$(".mailobj<%= mail.id %>").parent().css("background-color", "yellow");
+    <% if mail.read == false %>
+$(".mailobj<%= mail.id %>").parent().css({
+    "background-color": "black",
+    "color": "white"});
     <% end %>
 <% end %>
